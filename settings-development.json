@@ -1,6 +1,9 @@
 {
-  "public": {},
+  "public": {
+    "stripe": "pk_test_F6znz3LFGui6LtDU8LAm3xAZ"
+  },
   "private": {
+    "stripe": "sk_test_xKro33MWBqtUkwjVZmIdAujh",
     "MAIL_URL": "",
     "OAuth": {
       "facebook": {

@@ -45,3 +45,17 @@
     margin-bottom: 40px;
   }
 }
+
+.page-header {
+  margin-top: 0px;
+
+  h4 {
+    margin-top: 7px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    margin-top: 20px;
+  }
+}

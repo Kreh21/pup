@@ -1,6 +1,8 @@
 import seeder from '@cleverbeagle/seeder';
 import { Meteor } from 'meteor/meteor';
 import Documents from '../../api/Documents/Documents';
+import Plans from '../../api/Plans/Plans';
+
 
 const documentsSeed = userId => ({
   collection: Documents,
@@ -52,3 +54,31 @@ seeder(Meteor.users, {
     };
   },
 });
+
+const plans = [{
+  planId: 'large',
+  label: 'Large (20 documents)',
+  price: 2000,
+}, {
+  planId: 'medium',
+  label: 'Medium (15 documents)',
+  price: 1500,
+}, {
+  planId: 'small',
+  label: 'Small (10 documents)',
+  price: 1000,
+}, {
+  planId: 'tiny',
+  label: 'Tiny (5 documents)',
+  price: 500,
+}];
+
+plans.forEach(({ planId, label, price }) => {
+  const planExists = Plans.findOne({ planId });
+  if (!planExists) Plans.insert({ planId, label, price });
+});
+
+
+
+
+
